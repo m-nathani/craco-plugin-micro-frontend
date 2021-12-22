@@ -16,7 +16,7 @@ npm install craco-plugin-micro-frontend --save-dev
 1. Add the plugin into your craco.config.js;
 
 ```js
-const microFrontedPlugin = require('./craco-plugin-micro-frontend');
+const microFrontedPlugin = require('craco-plugin-micro-frontend');
 
 module.exports = {
   plugins: [

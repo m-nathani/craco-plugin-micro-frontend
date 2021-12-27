@@ -67,6 +67,6 @@ Further information at : [@craco](https://github.com/gsoft-inc/craco/issues/353)
 
 ## License
 
-craco-plugin-micro-frontend is open source software licensed as MIT.
+**`craco-plugin-micro-frontend`** is open source software licensed as MIT.
 
 Inspired by: [craco-plugin-single-spa-application](https://github.com/hasanayan/craco-plugin-single-spa-application)

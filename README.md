@@ -5,6 +5,11 @@ Convert your CRA project into a node library application without ejecting or los
 ![](https://img.shields.io/npm/v/craco-plugin-micro-frontend.svg?style=flat)
 ![](https://img.shields.io/npm/dt/craco-plugin-micro-frontend.svg?style=flat)
 
+
+## Demo
+
+Here is the [code](https://github.com/m-nathani/react-bootstrap) for how to use this package in production application.
+
 ## Install
 
 ```
@@ -63,3 +68,5 @@ Further information at : [@craco](https://github.com/gsoft-inc/craco/issues/353)
 ## License
 
 craco-plugin-micro-frontend is open source software licensed as MIT.
+
+Inspired by: [craco-plugin-single-spa-application](https://github.com/hasanayan/craco-plugin-single-spa-application)

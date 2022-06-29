@@ -1,6 +1,6 @@
 {
   "name": "craco-plugin-micro-frontend",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "Convert your CRA5 project into a node library application without ejecting or losing update support of react-scripts",
   "keywords": [

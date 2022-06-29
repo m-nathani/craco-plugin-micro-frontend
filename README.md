@@ -2,6 +2,8 @@
 
 Convert your **CRA 5** project into a node library application without ejecting or losing update support of react-scripts
 
+**Please find the detail explanation of how to use it [here](https://dev.to/mnathani/plugin-to-make-micro-frontend-using-cra-425n)**
+
 ![](https://img.shields.io/npm/v/craco-plugin-micro-frontend.svg?style=flat)
 ![](https://img.shields.io/npm/dt/craco-plugin-micro-frontend.svg?style=flat)
 
@@ -73,7 +75,7 @@ module.exports = {
   "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]]
 ```
 
-4. for any further issues check (@craco/craco)[https://github.com/dilanx/craco]
+4. for any further issues check [@craco/craco](https://github.com/dilanx/craco/issues) or [create-react-app](https://github.com/facebook/create-react-app/issues)
 
 ## License
 

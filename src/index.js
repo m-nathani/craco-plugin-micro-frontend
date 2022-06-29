@@ -5,9 +5,13 @@ const makeInjectable = require('./make-injectable');
 const disableCSSExtraction = require('./disable-css-extraction');
 const jestConfigOptions = require('./jest-config');
 const webpackAlias = require('./webpack-alias');
+const ignoreWarnings = require('./ignoreWarnings');
 
 module.exports = {
   overrideWebpackConfig: ({ webpackConfig, pluginOptions, context }) => {
+    // NOTE: remove the ignore warning once you have fixed all source-map-errors from packages
+    // for more details: https://github.com/facebook/create-react-app/discussions/11767
+    ignoreWarnings(webpackConfig);
     addPlugins(webpackConfig, [[new WebpackBar({ profile: true }), 'append']]);
 
     if (process.env.REACT_APP_INTERACTIVE_ANALYZE) {
@@ -20,6 +24,7 @@ module.exports = {
       disableCSSExtraction(webpackConfig);
       makeInjectable({ webpackConfig, pluginOptions, context });
     }
+
     return webpackConfig;
   },
   overrideCracoConfig: ({ cracoConfig, context }) => {

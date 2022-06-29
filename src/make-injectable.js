@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 
 module.exports = ({
   webpackConfig,
@@ -33,6 +34,10 @@ module.exports = ({
   webpackConfig.output.publicPath = '';
 
   webpackConfig.optimization.minimize = minimize;
+  webpackConfig.optimization.minimizer = [
+    ...webpackConfig.optimization.minimizer,
+    new HtmlMinimizerPlugin(),
+  ];
   webpackConfig.optimization.runtimeChunk = false;
 
   webpackConfig.optimization.splitChunks = {

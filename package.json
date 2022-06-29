@@ -2,21 +2,21 @@
   "name": "craco-plugin-micro-frontend",
   "version": "2.0.0",
   "private": false,
-  "description": "Convert your CRA4 project into a node library application without ejecting or losing update support of react-scripts",
+  "description": "Convert your CRA5 project into a node library application without ejecting or losing update support of react-scripts",
   "keywords": [
-    "webpack",
+    "webpack@5",
     "micro-frontend",
     "react",
     "create-react-app",
-    "cra",
-    "craco",
+    "cra@5",
+    "craco@7",
     "eslint",
     "config",
     "plugin",
-    "lint",
-    "ecmascript",
-    "javascript",
+    "eslint",
+    "react-scripts@5",
     "react",
+    "javascript",
     "jsx"
   ],
   "main": "src/index.js",
@@ -47,30 +47,30 @@
     ]
   },
   "dependencies": {
-    "@craco/craco": "^6.4.3",
-    "sass": "^1.45.0",
-    "style-loader": "1.3.0",
+    "@craco/craco": "^7.0.0-alpha.3",
+    "html-minimizer-webpack-plugin": "^4.0.0",
+    "sass": "^1.53.0",
+    "style-loader": "^3.3.1",
     "webpack-bundle-analyzer": "^4.5.0",
-    "webpackbar": "^5.0.2",
-    "worker-loader": "^3.0.8"
+    "webpackbar": "^5.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
-    "eslint-config-cra": "^3.0.0",
-    "prettier-config-cra": "^5.0.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "eslint-config-cra": "^4.0.0",
+    "prettier-config-cra": "^6.0.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
-    "eslint": "^7.30.0",
+    "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.3",
-    "react-scripts": "^4.0.3",
-    "standard-version": "^9.3.2"
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.7.1",
+    "react-scripts": "^5.0.1",
+    "standard-version": "^9.5.0"
   },
   "peerDependencies": {
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.0 || ^5.0.0"
   }
 }

@@ -1,10 +1,9 @@
 # craco-plugin-micro-frontend
 
-Convert your CRA project into a node library application without ejecting or losing update support of react-scripts
+Convert your **CRA 5** project into a node library application without ejecting or losing update support of react-scripts
 
 ![](https://img.shields.io/npm/v/craco-plugin-micro-frontend.svg?style=flat)
 ![](https://img.shields.io/npm/dt/craco-plugin-micro-frontend.svg?style=flat)
-
 
 ## Demo
 
@@ -34,7 +33,7 @@ module.exports = {
         orgPackagesAsExternal: false, // defaults to false. marks packages that has @my-org prefix as external so they are not included in the bundle
         reactPackagesAsExternal: true, // defaults to true. marks react and react-dom as external so they are not included in the bundle
         externals: ['react-router', 'react-router-dom'], // defaults to []. marks the specified modules as external so they are not included in the bundle
-        minimize: false, // defaults to false, sets optimization.minimize value
+        minimize: true, // defaults to false, sets optimization.minimize value
         libraryTarget: 'commonjs2', // defaults to umd
         outputPath: 'dist',
         customJestConfig: {}, // custom jest configurations
@@ -62,11 +61,20 @@ module.exports = {
 
 ## NOTE
 
-`craco-plugin-micro-frontend` is waiting for @craco to update its peer deps to `react-script: "5.0.0"`
-Further information at : [@craco](https://github.com/gsoft-inc/craco/issues/353).
+`craco-plugin-micro-frontend` now supports `react-script: "^5.0.0"` with `wepback: "^5.64.4"`
+
+### Changes might need to support create-react-app 5 would:
+
+1. moving workers to new way of importing, (detail)[https://webpack.js.org/guides/web-workers/]
+2. fixing lint issues
+3. adding .babelrc with below if using decorators
+
+```js
+  "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]]
+```
+
+4. for any further issues check (@craco/craco)[https://github.com/dilanx/craco]
 
 ## License
 
 **`craco-plugin-micro-frontend`** is open source software licensed as MIT.
-
-Inspired by: [craco-plugin-single-spa-application](https://github.com/hasanayan/craco-plugin-single-spa-application)
